@@ -68,13 +68,6 @@ User-Management
 ├── BackEnd_User-Management
 └── .gitignore
 
-📂 Project Structure
-🔹 Root Folder
-User-Management
-├── FrontEnd_User-Management
-├── BackEnd_User-Management
-└── .gitignore
-
 🔹 Backend Structure
 BackEnd_User-Management
 ├── Controllers
@@ -124,3 +117,7 @@ http://localhost:4200
   Entity Framework Core & migrations
   Pagination and search implementation
   Full-stack application workflow
+
+
+
+
