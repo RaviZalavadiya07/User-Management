@@ -91,26 +91,26 @@ FrontEnd_User-Management
 ├── angular.json
 └── package.json
 
+```
+## 🚀 How to Run the Project
 
-🚀 How to Run the Project
+### ▶ Backend Setup
+- Open BackEnd_User-Management in Visual Studio
+- Update database connection in appsettings.json
+- Run migrations:
+- Update-Database
+- Run the API (F5)
 
-▶ Backend Setup
-Open BackEnd_User-Management in Visual Studio
-Update database connection in appsettings.json
-Run migrations:
-Update-Database
-Run the API (F5)
-
-▶ Frontend Setup
-Open FrontEnd_User-Management in VS Code
-Install dependencies:
-npm install
-Run the application:
-ng serve
-Open browser:
-http://localhost:4200
-
-📚 Learning Outcomes
+### ▶ Frontend Setup
+- Open FrontEnd_User-Management in VS Code
+- Install dependencies:
+- npm install
+- Run the application:
+- ng serve
+- Open browser:
+- http://localhost:4200
+---
+## 📚 Learning Outcomes
   Angular component-based architecture
   REST API integration in Angular
   ASP.NET Core Web API development
@@ -118,6 +118,6 @@ http://localhost:4200
   Pagination and search implementation
   Full-stack application workflow
 
-
+---
 
 
