@@ -1,0 +1,116 @@
+<div class="d-flex justify-content-center p-3">
+    <form class="shadow w-50 p-3" [formGroup]="userForm" (ngSubmit)="save()"> 
+        <h5>Add User</h5>
+        <div class="row mt-3">
+            <div class="w-50 d-flex flex-column">
+                <mat-form-field appearance="outline">
+                    <mat-label>First Name</mat-label>
+                    <input matInput formControlName="firstName">   
+                    <mat-error *ngIf="userForm.get('firstName')?.hasError('required')">
+                        First Name is required.
+                    </mat-error>
+                    <mat-error *ngIf="userForm.get('firstName')?.hasError('pattern')">
+                        First Name can only contain letters.
+                    </mat-error>   
+                </mat-form-field>
+                
+            </div>
+            <div class="w-50 d-flex flex-column">
+                <mat-form-field appearance="outline">
+                    <mat-label>Last Name</mat-label>
+                    <input matInput formControlName="lastName">
+                    <mat-error *ngIf="userForm.get('lastName')?.hasError('required')">
+                        Last Name is required.
+                    </mat-error>
+                    <mat-error *ngIf="userForm.get('lastName')?.hasError('pattern')">
+                        Last Name can only contain letters.
+                    </mat-error>
+                </mat-form-field>
+            </div>
+        </div>
+
+        <div class="row mt-3">
+            <mat-form-field appearance="outline">
+                <mat-label>Email</mat-label>
+                <input matInput formControlName="email">
+            </mat-form-field>
+        </div>
+
+        <div class="row mt-3">
+            <div class="w-50 d-flex flex-column">
+                <mat-form-field appearance="outline">
+                    <mat-label>Date of Birth</mat-label>
+                    <input matInput [matDatepicker]="picker" formControlName="dateofBorth"> 
+                    <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker startView="year" [startAt]="startDate"></mat-datepicker>
+                  </mat-form-field>
+            </div>
+            <div class="w-50 d-flex flex-column">
+                <mat-form-field appearance="outline">
+                    <mat-label>Phone Number</mat-label>
+                    <input matInput formControlName="phoneNo">
+                </mat-form-field>
+            </div>
+        </div>
+
+        <div class="row mt-3">
+            <div class="w-50 d-flex flex-column">
+                <mat-form-field appearance="outline">
+                    <mat-label>State</mat-label>
+                    <mat-select formControlName="state">
+                        <mat-option value="one">First option</mat-option>
+                        <mat-option value="two">Second option</mat-option>
+                      </mat-select>
+                  </mat-form-field>
+            </div>
+            <div class="w-50 d-flex flex-column">
+                <mat-form-field appearance="outline">
+                    <mat-label>City</mat-label>
+                    <mat-select formControlName="city" >
+                        <mat-option value="one">First option</mat-option>
+                        <mat-option value="two">Second option</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+            </div>
+        </div>
+
+        <div class="row mt-3">
+            <label>Gender </label>
+            <mat-radio-group formControlName="gender">
+              <mat-radio-button value="male">Male</mat-radio-button>
+              <mat-radio-button value="female">Female</mat-radio-button>
+              <mat-radio-button value="other">Other</mat-radio-button>
+            </mat-radio-group>
+        </div>
+
+        <div class="row mt-3">
+            <div class="w-50 d-flex flex-column">
+                <mat-form-field appearance="outline">
+                    <mat-label>Password</mat-label>
+                    <input matInput type="password" formControlName="password">
+                </mat-form-field>
+            </div>
+            <div class="w-50 d-flex flex-column">
+                <mat-form-field appearance="outline">
+                    <mat-label>Conform Password</mat-label>
+                    <input matInput type="password" formControlName="confirmPassword">
+                </mat-form-field>
+            </div>
+        </div>
+
+        <div class="text-center">     
+            @if (isEdit) {
+                <button mat-raised-button [disabled]="!userForm.valid">Update</button>  
+            }@else {
+                <button mat-raised-button [disabled]="!userForm.valid">Add</button>         
+            }
+        </div>
+          
+    </form>
+</div>
+
+
+
+
+
+  
