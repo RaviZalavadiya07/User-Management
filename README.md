@@ -104,19 +104,19 @@ FrontEnd_User-Management
 ### ▶ Frontend Setup
 - Open FrontEnd_User-Management in VS Code
 - Install dependencies:
-- npm install
+  npm install
 - Run the application:
-- ng serve
+  ng serve
 - Open browser:
-- http://localhost:4200
+  http://localhost:4200
 ---
 ## 📚 Learning Outcomes
-  Angular component-based architecture
-  REST API integration in Angular
-  ASP.NET Core Web API development
-  Entity Framework Core & migrations
-  Pagination and search implementation
-  Full-stack application workflow
+  - Angular component-based architecture
+  - REST API integration in Angular
+  - ASP.NET Core Web API development
+  - Entity Framework Core & migrations
+  - Pagination and search implementation
+  - Full-stack application workflow
 
 ---
 
